@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard do Trello</title>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script src="jquery.min-2.1.1.js"></script>
+    <script src="https://api.trello.com/1/client.js?key=79d4453a86f529dcbfbef6c7f9527a25"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="google_jsapi.js"></script>
+    <!-- <script type="text/javascript" src="https://www.google.com/jsapi"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="trello.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header>
+        <h1>Dashboard do Trello</h1>
+        <div id="user"></div>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#open-projects" data-toggle="tab">Projetos</a></li>
+            <li><a href="#membros" data-toggle="tab">Membros</a></li>
+            <li><a href="#graficos" data-toggle="tab" id="graficoDesempenho">Gráfico</a></li>
+        </ul>
+    </header>
+    <section class="container">
+        <div class="tab-content ">
+            <!-- Projetos abertos -->
+            <div class="tab-pane active" id="open-projects" ></div>
+            <!-- Membros do time -->
+            <div class="tab-pane" id="membros"></div>
+            <!-- Graficos -->
+            <div class="tab-pane" id="graficos">
+                <h1>Grafico de desempenho do time</h1>
+                <label for="select-mes-grafico">Escolha um mês:</label>
+                <select name="mes-grafico" id="select-mes-grafico">
+                    <option value="#">Selecione</option>
+                    <option value="01/2018">Janeiro/2018</option>
+                    <option value="02/2018">Fevereiro/2018</option>
+                    <option value="03/2018">Março/2018</option>
+                    <option value="04/2018">Abril/2018</option>
+                    <option value="05/2018">Maio/2018</option>
+                    <option value="06/2018">Junho/2018</option>
+                    <option value="07/2018">Julho/2018</option>
+                    <option value="08/2018">Agosto/2018</option>
+                    <option value="09/2018">Setembro/2018</option>
+                    <option value="10/2018">Outubro/2018</option>
+                    <option value="11/2018">Novembro/2018</option>
+                    <option value="12/2018">Dezembro/2018</option>
+                </select>
+                <div id="grafico_time"></div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="width-modal" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="projetos">
+                            <a class="btn btn-default" role="button" data-toggle="collapse" href="#ProjetosDoMembro" aria-expanded="false" aria-controls="ProjetosDoMembro">
+                                Projetos deste Membro
+                            </a>
+                            <div class="collapse" id="ProjetosDoMembro">
+                                <div class="projetos-membro"></div>
+                            </div>
+                        </div>
+                        <div id="dataProject">
+                            <a class="btn btn-default" role="button" data-toggle="collapse" href="#dadosProjeto" aria-expanded="false" aria-controls="ProjetosDoMembro">
+                                    Dados
+                            </a>
+                            <div class="collapse" id="dadosProjeto">
+                                <div class="dados-projeto">
+                                    <div id="status">Status:<span></span></div>
+                                    <div id="qtd-cards">Quantidade de cards:<span></span></div>
+                                    <div id="qtd-cards-feitos">Quantidade de cards feitos:<span></span></div>
+                                    <div id="pontos-estimados">Pontos estimados:<span></span></div>
+                                    <div id="pontos-consumidos">Pontos consumidos:<span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="nome">Nome</th>
+                                    <th>Etiqueta</th>
+                                    <th>Data de entrega</th>
+                                    <th>Dias de atraso</th>
+                                    <th>Pont. estimados</th>
+                                    <th>Pont. consumidos</th>
+                                    <th>Posição</th>
+                                    <th>Membro</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="trello.js"></script>
+    <script src="grafico.js"></script>
+<footer><p> &copy; Grupo de Comunicação O Povo</p></footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#user{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+#myModal{
+    padding-right: 0 !important;
+}
+
+body, html{
+    position: relative;
+}
+
+header{
+    background-color: #363235;
+    color: #fff;
+    padding: 5px 40px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+header h1{
+    cursor: pointer;
+    width: 19ch;
+}
+
+.projects{
+    padding: 6px 12px;
+    background-color: #bb6c34;
+    margin: 10px;
+    border: 0;
+    width: 30%;
+    height: 140px;
+    display: inline-block;
+    color: #FFF;
+    cursor: default;
+}
+
+.projects:hover{
+    text-decoration: none;
+    color: #fff;
+    border-style: solid;
+    transition: 0.3s;
+    border-radius: 0 40px 40px 0;
+    border-bottom-color: #331a00;
+    border-bottom-width: 85px;
+    transition: 0.7s;
+}
+
+.title-project{
+    display: block;
+    margin-bottom: 15px;
+    min-height: 60px;
+}
+
+.projects p{
+    color: #fff;
+    display: block;
+    padding: 6px 12px;
+    }
+
+.projects a{
+    color: #fff;
+    display: block;
+    padding: 5px 0;
+    width: 17ch;
+}
+
+.projects .click-modal{
+    display: initial;
+}
+
+.membro-time{
+    width: 31.33%;
+    display: inline-block;
+    background-color: #bb6c34;
+    color: #fff;
+    padding: 10px 12px;
+    margin: 10px 10px;
+    height: 70px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.membro-time:hover{
+    background-color: #331a00;
+    transition: 0.8s;
+}
+
+.img-membro{
+    min-height: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    display: inline-block;
+}
+
+.fullName-membro{
+    display: inline-block;
+    margin-left: 10px;
+    width: initial;
+}
+
+.width-modal{
+    border: solid;
+    border-width: 20px 20px 100px 20px;
+    border-color: transparent;
+}
+
+.modal-body{
+    min-height: 450px;
+    max-height: 450px;
+    overflow-y: auto;
+}
+#projetos{
+    display: none;
+}
+
+#projetos a, #dataProject a{
+    margin-bottom: 5px;
+    width: 300px;
+    text-align: left;
+}
+
+.projetos-membro{
+    min-height: 100px;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+footer{
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background-color: #363235;
+    color: #fff;
+    margin-top: 10px;
+}
+
+footer p{
+    text-align: center;margin: 10px 0;
+}
+
+.nav-tabs>li>a{
+    color: #fff;
+}
+
+.nav-tabs>li>a:hover{
+    color: #000;
+}
+
+#grafico_time div{
+    position: absolute!important;
+    left: 0;
+}
+
+#select-mes-grafico{
+    padding: 6px 12px;
+    background-color: #fff;
+    border-radius: 5px;
+}
